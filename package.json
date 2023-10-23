@@ -7,9 +7,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "predeploy": "nuxt generate",
-    "deploy": "npm run clear && npm run generate && npm run deploy-gh-pages",
-    "clear": "rm -rf .output/public",
-    "deploy-gh-pages": "git add . && git commit -m 'Deploy to gh-pages' && git push origin HEAD:gh-pages"
+    "deploy": "npx nuxi generate && git add -f .output/public && git commit -m 'Deploy to gh-pages' && git subtree push --prefix .output/public/ origin gh-pages"
   },
   "devDependencies": {
     "@nuxt/postcss8": "^1.1.3",
