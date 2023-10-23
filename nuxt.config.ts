@@ -30,6 +30,10 @@ export default {
         rel: "stylesheet",
         href: "https://rsms.me/inter/inter.css",
       },
+      {
+        rel: "stylesheet",
+        href: "https://rsms.me/inter/inter.css",
+      },
     ],
   },
   modules: ['@nuxtjs/color-mode'],
