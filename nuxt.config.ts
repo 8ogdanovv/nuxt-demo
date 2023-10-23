@@ -2,6 +2,27 @@
 export default {
   ssr: false,
   target: 'static',
+  app: {
+    head: {
+      title: 'Nuxt3 - theme toggler',
+      link: [
+        { rel: "icon", type: "image/png", href: "https://vadym4che.github.io/cv/favicon.png" },
+        {
+          rel: "preconnect",
+          href: "https://rsms.me/",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://rsms.me/inter/inter.css",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://rsms.me/inter/inter.css",
+        },
+      ],
+    },
+    baseURL: '/nuxt-demo/'
+  },
   router: {
     base: '/nuxt-demo/'
   },
@@ -20,23 +41,6 @@ export default {
   css: [
     '@/assets/css/main.css',
   ],
-  head: {
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "preconnect",
-        href: "https://rsms.me/",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://rsms.me/inter/inter.css",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://rsms.me/inter/inter.css",
-      },
-    ],
-  },
   modules: ['@nuxtjs/color-mode'],
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
